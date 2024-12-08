@@ -16,7 +16,10 @@ else:
     print(f"Request failed with status code: {response.status_code}")
     info = None
 
-conn = scratch3.login("Scratch ID", "Scratch PassWord").connect(1107675090, 1, True)
+username = os.getenv("SCRATCH_ID")  # 環境変数から取得
+password = os.getenv("SCRATCH_PASSWORD")  # 環境変数から取得
+
+conn = scratch3.login(username, password).connect(1107675090, 1, True)
 
 if info is not None:
     conn.send(["1"], [info])
