@@ -2,7 +2,7 @@ name: Daily Script Run
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 毎日 00:00 UTC に実行
+    - cron: '0 0 * * *'
 
 jobs:
   run-script:
@@ -19,6 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install scratch-websocket-api websocket-client requests
+
+      - name: Debug Environment Variables
+        run: echo "SCRATCH_ID=${{ secrets.SUID }}" && echo "SCRATCH_PASSWORD=***"
 
       - name: Run script
         env:
