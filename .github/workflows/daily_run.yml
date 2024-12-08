@@ -18,7 +18,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install requests scratch_api
+        run: pip install scratch-websocket-api websocket-client requests
 
       - name: Run script
         env:
