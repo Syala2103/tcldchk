@@ -24,4 +24,4 @@ jobs:
         env:
           SUID: ${{ secrets.SUID }}
           SUPS: ${{ secrets.SUPS }}
-        run: python main.py
+        run: python api.py
