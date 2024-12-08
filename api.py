@@ -16,8 +16,8 @@ else:
     print(f"Request failed with status code: {response.status_code}")
     info = None
 
-username = os.getenv("SCRATCH_ID")  # 環境変数から取得
-password = os.getenv("SCRATCH_PASSWORD")  # 環境変数から取得
+username = os.getenv("SUID")  # 環境変数から取得
+password = os.getenv("SUPS")  # 環境変数から取得
 
 conn = scratch3.login(username, password).connect(1107675090, 1, True)
 
