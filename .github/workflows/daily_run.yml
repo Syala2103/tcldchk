@@ -22,6 +22,6 @@ jobs:
 
       - name: Run script
         env:
-          SUID: ${{ secrets.SUID }}
-          SUPS: ${{ secrets.SUPS }}
+          SCRATCH_ID: ${{ secrets.SUID }}
+          SCRATCH_PASSWORD: ${{ secrets.SUPS }}
         run: python api.py
